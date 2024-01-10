@@ -11,7 +11,7 @@ create table if not exists customer_orders
     name varchar(255)
 );
 
-create table if not exists customer_profile 
+create table if not exists customer_profiles
 (
     id serial primary key,
     customer bigint not null references customer (id),
@@ -19,6 +19,6 @@ create table if not exists customer_profile
     password text not null
 );
 
-delete from customer;
 delete from customer_orders;
-delete from customer_profile;
+delete from customer_profiles;
+delete from customer;
